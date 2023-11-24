@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 3.22.2)
+project(Class_Hierarchy)
+include_directories(Libs)
+set(SOURSE_EXE Class_Hierarchy.cpp)
+add_executable(Class_Hierarchy ${SOURSE_EXE})
+add_subdirectory(Libs)
+target_link_libraries(Class_Hierarchy Figures.DLL)
