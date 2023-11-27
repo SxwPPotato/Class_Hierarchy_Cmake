@@ -1,11 +1,7 @@
 #pragma once
 #include <string>
 
-#ifdef DYNAMICLIB_EXPORTS
-#define FIGURES_API __declspec(dllexport)
-#else
-#define FIGURES_API __declspec(dllimport)
-#endif
+#include "Macros.h"
 
 class Figures {
 protected:

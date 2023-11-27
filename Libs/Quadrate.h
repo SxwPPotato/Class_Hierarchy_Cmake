@@ -1,13 +1,9 @@
 #pragma once
 
-#ifdef DYNAMICLIB_EXPORTS
-#define QUADRATE_API __declspec(dllexport)
-#else
-#define QUADRATE_API __declspec(dllimport)
-#endif
+#include "Macros.h"
 
 
 class Quadrate : public Rhomb {
 public:
-	QUADRATE_API Quadrate(int a);
+	FIGURES_API Quadrate(int a);
 };

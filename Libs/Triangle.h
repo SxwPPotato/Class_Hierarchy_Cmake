@@ -1,10 +1,6 @@
 #pragma once
 #include "Figures.h"
-#ifdef DYNAMICLIB_EXPORTS
-#define TRIANGLE_API __declspec(dllexport)
-#else
-#define TRIANGLE_API __declspec(dllimport)
-#endif
+#include "Macros.h"
 
 class Triangle : public Figures {
 protected:
@@ -16,8 +12,8 @@ protected:
     int C;
 
 public:
-    TRIANGLE_API Triangle();
-    TRIANGLE_API Triangle(int a, int b, int c, int A, int B, int C);
-    TRIANGLE_API void Show_figure() override;
+    FIGURES_API Triangle();
+    FIGURES_API Triangle(int a, int b, int c, int A, int B, int C);
+    FIGURES_API void Show_figure() override;
     
 };
